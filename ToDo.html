@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+  </head>
+    <style>
+    /* Background Color */
+    body{
+      background-color: salmon;
+      text-align: center;
+      font-family: 'Jost', sans-serif;
+    }
+    h1{
+      font-weight: bold;
+      font-size:80px;
+      margin-bottom: 25px;
+      color: white;
+
+    /* Rules Text */
+    }
+    p{
+      font-weight: 400;
+      font-size: 20px;
+    }
+
+
+    /*The new list that the user enters*/
+    ul{
+      text-align: left;
+      margin-top: 20px;
+      margin-left: 65px;
+    }
+
+
+    /*Specifically each item in the new list*/
+    li{
+      list-style: none;
+      padding: 10px 20px 5px;
+      color: white;
+      font-weight: 400;
+      font-size: 14px;
+      border: 2px solid white;
+      margin-bottom: 10px;
+      background: slategray;
+      transition: all 0.75s ease;
+
+    }
+
+      li:hover {
+      background: lightgray;
+      }
+
+
+      /*Button is identified in the js, and this turns each list item into a button that can
+      completed or removed.*/
+      li button {
+      background: none;
+      border: none;
+      float: right;
+      color: white;
+      font-weight: 400;
+      }
+
+      /*Input Styling */
+      input {
+      border-radius: 5px;
+      min-width: 65%;
+      padding: 10px;
+      border: none;
+      font-size: 15px;
+      }
+
+      @media screen and (max-width: 480px) {
+        ul{
+          text-align: left;
+          margin-top: 20px;
+          margin-left: 10px;
+        }
+      }
+
+
+    </style>
+
+    <body>
+      <!-- Using bootstrap grid format -->
+      <div class="container">
+       <div class="row">
+         <div class="intro col-8">
+           <h1>Things To Do</h1>
+           <div>
+             <div class="border1"></div>
+           </div>
+         </div>
+       </div>
+
+       <div class="row">
+         <div class="helpText col-8">
+           <p id="first">add tasks, click on a task to once complete, click remove to delete a task.</p>
+
+         </div>
+       </div>
+
+       <div class="row">
+         <div class="col-8">
+           <input id="user-input" type="text" placeholder="New Task.." maxlength="30">
+           <button id="enter"><i class="fas fa-arrow-right"></i></button>
+         </div>
+       </div>
+
+       <!-- Empty List -->
+       <div class="row">
+         <div class="listItems col-12">
+           <ul id="button" class="col-8 col-sm-8">
+           </ul>
+         </div>
+       </div>
+
+      </div>
+
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+
+    <script src="javascript.js">
+    </script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+    </body>
+    </html>
